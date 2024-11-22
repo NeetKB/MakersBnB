@@ -13,7 +13,7 @@ class UserRepository:
 
     def create_user(self, user):
         row = self._connection.execute('select * from users where username = %s', [user.username])
-        # print(row)
+        print(row)
         if row == []:
             row = self._connection.execute('select * from users where email = %s', [user.email])
             if row == []:

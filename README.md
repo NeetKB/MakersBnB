@@ -1,10 +1,17 @@
-# MakersBnB Python Project Seed
+# MakersBnB Project
 
-This repo contains the seed codebase for the MakersBnB project in Python (using 
-Flask and Pytest).
+This repository is an AirBnb clone which aims to replicate its core functunalities.
 
-Someone in your team should fork this seed repo to their GitHub account.
-Everyone in the team should then clone this fork to their local machine to work on it.
+## Built with Python, Flask, PostgreSQL and Pytest.
+
+## 🌟 Features
+
+    * Design & Responsiveness: Leveraging Bootstrap for modern UI components and responsiveness.
+    * _User Authentication:_ Users can create an account and log in. Passwords are encrypted in the database.
+
+## 🔧 Prerequisites
+
+Ensure you have PostgreSQL installed.
 
 ## Setup
 
@@ -13,26 +20,18 @@ Everyone in the team should then clone this fork to their local machine to work 
 ; python -m venv makersbnb-venv
 
 # Activate the virtual environment
-; source makersbnb-venv/bin/activate 
+; source makersbnb-venv/bin/activate
 
 # Install dependencies
 (makersbnb-venv); pip install -r requirements.txt
 
 # Install the virtual browser we will use for testing
 (makersbnb-venv); playwright install
-# If you have problems with the above, contact your coach
 
-# Create a test and development database
-(makersbnb-venv); createdb YOUR_PROJECT_NAME
-(makersbnb-venv); createdb YOUR_PROJECT_NAME_TEST
-
-# Open lib/database_connection.py and change the database names
-(makersbnb-venv); open lib/database_connection.py
-
-# Run the tests (with extra logging)
+# To run the tests (with extra logging)
 (makersbnb-venv); pytest -sv
 
-# Run the app
+# To run the app
 (makersbnb-venv); python app.py
 
 # Now visit http://localhost:5001/index in your browser

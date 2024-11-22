@@ -10,8 +10,8 @@ from psycopg.rows import dict_row
 # That's why we have provided it!
 class DatabaseConnection:
     # VVV CHANGE BOTH OF THESE VVV
-    DEV_DATABASE_NAME = "MAKERSBNB_AIR"
-    TEST_DATABASE_NAME = "MAKERSBNB_AIR_TEST"
+    DEV_DATABASE_NAME = "MAKERSBNB"
+    TEST_DATABASE_NAME = "MAKERSBNB_TEST"
 
     def __init__(self, test_mode=False):
         self.test_mode = test_mode
@@ -21,21 +21,25 @@ class DatabaseConnection:
     def connect(self):
         try:
             self.connection = psycopg.connect(
-                f"postgresql://localhost/{self._database_name()}",
+                f"postgresql://amani:admin@localhost/{self._database_name()}",
                 row_factory=dict_row)
         except psycopg.OperationalError:
             raise Exception(f"Couldn't connect to the database {self._database_name()}! " \
                     f"Did you create it using `createdb {self._database_name()}`?")
+        print(f"connected to db") 
 
     # This method seeds the database with the given SQL file.
     # We use it to set up our database ready for our tests or application.
     def seed(self, sql_filename):
+        print(f"SQL Filename: {sql_filename}") 
         self._check_connection()
         if not os.path.exists(sql_filename):
             raise Exception(f"File {sql_filename} does not exist")
         with self.connection.cursor() as cursor:
             cursor.execute(open(sql_filename, "r").read())
             self.connection.commit()
+
+    
 
     # This method executes an SQL query on the database.
     # It allows you to set some parameters too. You'll learn about this later.
