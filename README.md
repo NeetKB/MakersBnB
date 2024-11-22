@@ -11,16 +11,16 @@ This repository is an AirBnb clone which aims to replicate its core functunaliti
 
 ## 🔧 Prerequisites
 
-Ensure you have PostgreSQL installed.
+Ensure you have Python and PostgreSQL installed.
 
-## Setup
+## Setup for Windows
 
 ```shell
 # Set up the virtual environment
 ; python -m venv makersbnb-venv
 
 # Activate the virtual environment
-; source makersbnb-venv/bin/activate
+; makersbnb-venv\Scripts\Activate
 
 # Install dependencies
 (makersbnb-venv); pip install -r requirements.txt
