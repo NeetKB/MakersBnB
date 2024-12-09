@@ -6,8 +6,13 @@ This repository is an AirBnb clone which aims to replicate its core functunaliti
 
 ## 🌟 Features
 
-    * Design & Responsiveness: Leveraging Bootstrap for modern UI components and responsiveness.
-    * _User Authentication:_ Users can create an account and log in. Passwords are encrypted in the database.
+     * User Authentication: Users can create an account and log in. Passwords are encrypted in the database.
+     * Design & Responsiveness: Leveraging Bootstrap for modern UI components and responsiveness.
+     * Database Management: Utilizes PostgreSQL for robust, scalable, and reliable data storage.
+     * Testing Suite: Implements pytest for unit and integration testing, ensuring high code quality and reliability.
+     * Routing: Employs Flask's URL routing for intuitive navigation across pages.
+     * Environment Configuration: Integrates configuration management with .env files for secure handling of sensitive information.
+     * Error Handling: Provides comprehensive error handling for better debugging and user feedback
 
 ## 🔧 Prerequisites
 
